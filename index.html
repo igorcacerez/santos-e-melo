@@ -46,18 +46,54 @@
     <!-- Icones -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/js/all.min.js"></script>
 
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/estilo.css" />
     <link rel="stylesheet" href="assets/css/responsivo.css" />
 </head>
 <body>
 
+    <menu id="menuMobile">
+        <img src="assets/img/logo.png" class="logo" />
+
+        <ul>
+            <li>
+                <a href="#pg_empresa" class="scroll">
+                    EMPRESA
+                </a>
+            </li>
+
+            <li>
+                <a href="#pg_servicos" class="scroll">
+                    SERVIÇOS
+                </a>
+            </li>
+
+            <li>
+                <a href="#pg_contato" class="scroll">
+                    CONTATO
+                </a>
+            </li>
+
+            <li class="icone">
+                <a href="#"> <i class="fab fa-facebook-f"></i> </a>
+                <a href="#"> <i class="fab fa-instagram"></i> </a>
+                <a href="#"> <i class="fab fa-youtube"></i> </a>
+            </li>
+        </ul>
+    </menu>
+
+    <div id="fundo"></div>
+
+
     <!-- Menu -->
     <div class="menu">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <img src="assets/img/logo.png" alt="Santos e Melo - Logotipo" title="logotipo santos e melo" />
+                    <img src="assets/img/logo.png" class="logo" alt="Santos e Melo - Logotipo" title="logotipo santos e melo" />
 
                     <!-- NAV -->
                     <ul>
@@ -87,6 +123,9 @@
                     </ul>
                     <!-- End >> NAV -->
 
+                    <button class="mobile" id="abreMobile">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -108,10 +147,12 @@
 
     <!-- A Empresa -->
     <section class="empresa" id="pg_empresa">
+        <div class="imagem"></div>
+
         <div class="container">
 
             <!-- Titulo -->
-            <div class="row">
+            <div class="row position-relative">
                 <div class="col-md-12">
                     <h3 class="titulo">A Empresa</h3>
                 </div>
@@ -131,28 +172,32 @@
                         <h3>Missão</h3>
 
                         <p>
-
+                            Nossa missão é disponibilizar serviços técnicos e soluções em facilities através de nosso
+                            comprometimento com a qualidade e excelência dos serviços prestados aos nossos clientes e
+                            parceiros, desenvolvendo, assim, relações transparentes e duradouras.
                         </p>
 
 
                         <h3 class="pt-3">Visão</h3>
 
                         <p>
-
+                            Ser reconhecida pelo nível de excelência nos serviços de terceirização e soluções
+                            disponibilizadas ao mercado, agregando conhecimento, novas tecnologias e os valores da
+                            empresa afim de ir além das expectativas dos clientes.
                         </p>
 
 
                         <h3 class="pt-3">Valores</h3>
 
                         <p>
-
+                            Ética, Transparência, Responsabilidade Social e Ambiental, Valorização, Qualidade,
+                            Excelência, Inovação e Reconhecimento de seus Colaboradores, Clientes e Parceiros.
                         </p>
 
                     </div>
                 </div>
 
                 <div class="col-md-6">
-                    <img src="assets/img/casa.png" class="imagem-grande" />
                 </div>
             </div>
             <!-- End >> Conteudo -->
@@ -170,7 +215,7 @@
             <!-- Titulo -->
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="titulo">Contato</h3>
+                    <h3 class="titulo">Serviços técnicos</h3>
                 </div>
             </div>
             <!-- Titulo -->
@@ -295,7 +340,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea class="form-control" name="mensagem" placeholder="MENSAGEM"></textarea>
+                            <textarea class="form-control" rows="7" name="mensagem" placeholder="MENSAGEM"></textarea>
                         </div>
 
                         <div class="form-group text-right">
@@ -312,7 +357,7 @@
             <div class="row sedes">
 
                 <!-- Matriz -->
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-12 pb-4">
                     <h4>MATRIZ - CAPITAL</h4>
                     <p>
                         Santos de melo engenharia e prestação de serviços LTDA
@@ -337,7 +382,7 @@
                 <!-- End >> Matriz -->
 
                 <!-- Interior -->
-                <div class="col-md-4">
+                <div class="col-md-5 col-sm-12 pb-4">
                     <h4>Escritório de serviços - INTERIOR</h4>
                     <p>
                         Avenida Euclides Miragaia, Nº 2704 <br>
@@ -420,5 +465,23 @@
 
     </footer>
     <!-- End >> Footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/js/funcoes.js"></script>
+
+    <script type="application/javascript">
+        // Ancoras de Links
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop:($(this.hash).offset().top)
+                }, 1500);
+
+                $("#menuMobile").css("left","-100%");
+                $("#fundo").fadeOut();
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+@media (max-width: 1060px)
+{
+    .banner{height: 70vh;}
+    .banner h1
+    {
+        letter-spacing: 8px;
+        font-size: 1.2em;
+        line-height: 37px;
+    }
+}
+
+
+@media (max-width: 991px)
+{
+    .menu ul{display: none;}
+    .menu .mobile{display: block;}
+
+    footer .principal .logo
+    {
+        display: block;
+        margin: 0 auto;
+    }
+
+    footer .principal ul
+    {
+        float: initial;
+        display: block;
+        width: 100%;
+    }
+
+    footer .principal ul li
+    {
+        display: block;
+        width: 100%;
+        padding: 8px 0px;
+    }
+}
+
+
+@media (max-width: 767px)
+{
+    .empresa .imagem{opacity: 0.1;}
+
+    footer .sub h4
+    {
+        text-align: center;
+    }
+
+    footer .sub .desigual
+    {
+        float: initial;
+        display: block;
+        margin: 10px auto 0px;
+        position: initial;
+    }
+}
+
+
+@media (max-width: 400px)
+{
+    .empresa h2{font-size: 2.5em;}
+}

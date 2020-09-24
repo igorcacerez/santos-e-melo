@@ -1,3 +1,10 @@
+@import "fontes.css";
+
+body, html
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
 .centraliza-itens
 {
     display: flex;
@@ -50,6 +57,8 @@
     position: fixed;
 }
 
+a, a:hover, a:focus, a:active{text-decoration: none; transition: all 0.3s;}
+a:hover{opacity: 0.8;}
 
 /*
 ==================================================
@@ -57,3 +66,337 @@
 ==================================================
 */
 
+/** MENU ========================================== **
+ ================================================== **/
+
+menu
+{
+    position: fixed;
+    background: #0e4194;
+    z-index: 999;
+    margin: 0px;
+    top: 0px;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    padding: 0px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+menu .logo{padding: 30px 0px;}
+menu ul
+{
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+}
+
+menu ul li{padding: 10px 0px;}
+menu ul li a{color: #fff; font-weight: 500;}
+menu ul .icone a{padding: 7px 9px;}
+
+#fundo
+{
+    display: none;
+    position: fixed;
+    top: 0px; left: 0px;
+    background: #000;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.menu
+{
+    position: absolute;
+    top: 0px; left: 0px;
+    width: 100%;
+    padding: 30px 0px;
+}
+
+.menu .row{border-bottom: 1px solid #fff; padding-bottom: 20px;}
+.menu .logo {display: inline;}
+.menu ul
+{
+    list-style-type: none;
+    float: right;
+    width: calc(100% - 200px);
+    padding: 0px;
+    padding-top: 20px;
+}
+
+.menu ul li
+{
+    width: calc(98% / 4);
+    display: inline-block;
+    text-align: center;
+}
+
+.menu ul li a{font-weight: bold; color: #fff;}
+.menu ul li.icone a{padding: 0px 10px;}
+
+.menu .mobile
+{
+    display: none;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 2em;
+}
+
+
+/** BANNER ======================================== **
+ ================================================== **/
+
+.banner
+{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/banner.png");
+    background-size: cover;
+}
+
+.banner h1
+{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 1.9em;
+}
+
+
+/** A EMPRESA ===================================== **
+ ================================================== **/
+
+.titulo
+{
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #0e4194;
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding: 60px 0px 40px;
+    position: relative;
+}
+
+.titulo::after
+{
+    position: absolute;
+    width: 100%;
+    top: 69px;
+    left: calc(-100% - 18px);
+    border-bottom: 1px solid #0e4194;
+    content: "";
+}
+
+.empresa {position: relative;}
+
+.empresa .imagem
+{
+    position: absolute;
+    width: 50%; height: 100%;
+    right: 0px; top: 0px;
+
+    background-image: url(../img/casa.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.empresa h2
+{
+    font-size: 3.5em;
+    text-transform: uppercase;
+    color: #008bd2;
+    font-weight: 900;
+    letter-spacing: 10px;
+    padding-bottom: 20px;
+}
+
+.empresa .texto h3
+{
+    color: #0e4194;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+}
+
+.empresa .texto p
+{
+    color: #0e4194;
+    font-size: 1em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+
+/** SERVIÇOS ====================================== **
+ ================================================== **/
+
+.servicos{padding: 50px 0px;}
+
+.servicos .item
+{
+    max-width: 360px;
+    display: block;
+    margin: 20px auto;
+    background-image: url("../img/servico.png");
+    background-size: cover;
+    background-position: bottom center;
+    border-radius: 10px;
+
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+
+    padding: 0px 40px;
+    min-height: 500px;
+}
+
+
+.servicos .item h4
+{
+    font-weight: 600;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    padding-top: 200px;
+    margin-bottom: 30px;
+}
+
+.servicos .item p
+{
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+}
+
+
+/** CONTATO ======================================= **
+ ================================================== **/
+
+.contato{padding-bottom: 70px;}
+
+.contato input,
+.contato textarea
+{
+    border: 2px solid #c2c2c2;
+    padding: 12px;
+    font-size: 0.8em;
+    letter-spacing: 5px;
+    border-radius: 10px;
+}
+
+.contato input{height: calc(1.5em + .75rem + 12px);}
+
+.contato button
+{
+    background: #008bd2;
+    border-color: #008bd2;
+    padding: 12px 44px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-radius: 10px;
+}
+
+.form-control:focus
+{
+    box-shadow: none;
+    border-color: #000;
+    outline: 0;
+}
+
+.contato .sedes{padding-top: 40px; text-transform: uppercase;}
+
+.contato .sedes h4
+{
+    font-weight: 900;
+    color: #008bd2;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+
+.contato .sedes p
+{
+    font-weight: 500;
+    color: #a8a8a8;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+}
+
+
+/** FOOTER ======================================== **
+ ================================================== **/
+
+footer .principal
+{
+    background: #008bd2;
+    padding: 40px 0px;
+}
+
+footer .principal .logo
+{
+    display: inline;
+}
+
+footer .principal ul
+{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    float: right;
+    width: calc(100% - 200px);
+    padding-top: 20px;
+}
+
+footer .principal ul li
+{
+    display: inline-block;
+    text-transform: uppercase;
+    width: calc((100% / 4) - 20px);
+    text-align: center;
+}
+
+footer .principal ul li a
+{
+    color: #fff;
+    font-weight: 500;
+}
+
+footer .principal ul li.icone a
+{
+    padding: 0px 10px;
+}
+
+
+
+footer .sub
+{
+    position: relative;
+    background: #0e4194;
+    padding: 7px 0px;
+}
+
+footer .sub h4
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.6em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-top: 7px;
+}
+
+footer .sub .desigual
+{
+    position: absolute;
+    top: 7px; right: 10px;
+}

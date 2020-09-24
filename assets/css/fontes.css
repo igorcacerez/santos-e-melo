@@ -1,0 +1,26 @@
+@font-face
+{
+  font-family: "Isidora";
+	src: url('fontes/isidora/regular.otf');
+
+  font-weight: normal;
+}
+
+
+@font-face
+{
+  font-family: "Isidora";
+	src: url('fontes/isidora/bold.otf');
+
+  font-weight: bold;
+}
+
+
+@font-face
+{
+  font-family: "Isidora";
+	src: url('fontes/isidora/light.otf');
+
+  font-weight: 100;
+}
+
